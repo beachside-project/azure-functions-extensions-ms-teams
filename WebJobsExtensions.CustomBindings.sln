@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29319.158
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4B8EA6E6-083C-42E2-B11F-410267473131}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E00FD4CA-5D17-4A58-8618-1D90B5C1F35F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{28E61FBE-6F96-4950-9B23-85E487C09561}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJobsExtensions.CustomBindings.MicrosoftTeams", "src\WebJobsExtensions.CustomBindings.MicrosoftTeams\WebJobsExtensions.CustomBindings.MicrosoftTeams.csproj", "{99ECE22C-0EDC-4AAD-8F5F-A3CC3F2EB7F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJobsExtensions.CustomBindings.MicrosoftTeams.Tests", "test\WebJobsExtensions.CustomBindings.MicrosoftTeams.Tests\WebJobsExtensions.CustomBindings.MicrosoftTeams.Tests.csproj", "{933481FA-2B80-4A98-BED9-DBD93209B7A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamsBindingFunctionAppSample", "samples\TeamsBindingFunctionAppSample\TeamsBindingFunctionAppSample.csproj", "{B7ED9A38-2F4A-447F-B54B-8F5281ABB2C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99ECE22C-0EDC-4AAD-8F5F-A3CC3F2EB7F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99ECE22C-0EDC-4AAD-8F5F-A3CC3F2EB7F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99ECE22C-0EDC-4AAD-8F5F-A3CC3F2EB7F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99ECE22C-0EDC-4AAD-8F5F-A3CC3F2EB7F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{933481FA-2B80-4A98-BED9-DBD93209B7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{933481FA-2B80-4A98-BED9-DBD93209B7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{933481FA-2B80-4A98-BED9-DBD93209B7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{933481FA-2B80-4A98-BED9-DBD93209B7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7ED9A38-2F4A-447F-B54B-8F5281ABB2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7ED9A38-2F4A-447F-B54B-8F5281ABB2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7ED9A38-2F4A-447F-B54B-8F5281ABB2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7ED9A38-2F4A-447F-B54B-8F5281ABB2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99ECE22C-0EDC-4AAD-8F5F-A3CC3F2EB7F8} = {4B8EA6E6-083C-42E2-B11F-410267473131}
+		{933481FA-2B80-4A98-BED9-DBD93209B7A3} = {E00FD4CA-5D17-4A58-8618-1D90B5C1F35F}
+		{B7ED9A38-2F4A-447F-B54B-8F5281ABB2C2} = {28E61FBE-6F96-4950-9B23-85E487C09561}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23838927-09DF-4EA0-AA39-61678409C7F1}
+	EndGlobalSection
+EndGlobal
