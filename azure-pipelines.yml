@@ -10,7 +10,7 @@ variables:
   vmImageOfBuild: windows-2019
   buildConfiguration: Release
   buildProject: src/WebJobsExtensions.CustomBindings.MicrosoftTeams/WebJobsExtensions.CustomBindings.MicrosoftTeams.csproj
-  testProjects: tests/**/*.csproj
+  testProjects: test/**/*.csproj
 
 
 stages:
