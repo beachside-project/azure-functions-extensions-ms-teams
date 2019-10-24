@@ -1,0 +1,64 @@
+trigger:
+  tags:
+    include:
+    - v*
+  branches:
+    include:
+    - master
+
+variables:
+  vmImageOfBuild: windows-2019
+  buildConfiguration: Release
+  buildProject: src/WebJobsExtensions.CustomBindings.MicrosoftTeams/WebJobsExtensions.CustomBindings.MicrosoftTeams.csproj
+  testProjects: test/**/*.csproj
+
+
+stages:
+- stage: build_test_stage
+  condition: in(variables['Build.Reason'], 'PullRequest', 'Manual')
+  jobs:
+  - job: test_job
+    displayName: Test
+    pool:
+      vmImage: $(vmImageOfBuild)
+    steps:
+    - task: DotNetCoreCLI@2
+      displayName: Test
+      inputs:
+        command: 'test'
+        projects: $(testProjects)
+        testRunTitle: 'run tests'
+
+- stage: individual_ci_stage
+  condition: eq(variables['Build.Reason'], 'IndividualCI')
+  jobs:
+  - job: logging
+    pool:
+      vmImage: $(vmImageOfBuild)
+    steps:
+    - script: |
+        echo master branch recieved Git-push.
+        echo Build.Reason is $(Build.Reason)
+        echo Build.SourceBranch is $(Build.SourceBranch)
+
+- stage: push_stage
+  condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/v')
+  jobs:
+  - job: pack_job
+    displayName: Pack
+    pool:
+      vmImage: $(vmImageOfBuild)
+    steps:
+    - task: NuGetCommand@2
+      inputs:
+        command: 'pack'
+        packagesToPack: '$(buildProject)'
+        packDestination: '$(Build.ArtifactStagingDirectory)'
+        versioningScheme: 'off'
+    - task: NuGetCommand@2
+      inputs:
+        command: 'push'
+        packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+        nuGetFeedType: 'internal'
+        publishVstsFeed: '4b0a92c6-28ec-45d8-b044-b37411c9af60'
+        allowPackageConflicts: true
