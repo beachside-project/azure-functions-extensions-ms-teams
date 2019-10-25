@@ -12,7 +12,6 @@ variables:
   buildProject: src/WebJobsExtensions.CustomBindings.MicrosoftTeams/WebJobsExtensions.CustomBindings.MicrosoftTeams.csproj
   testProjects: test/**/*.csproj
 
-
 stages:
 - stage: build_test_stage
   condition: in(variables['Build.Reason'], 'PullRequest', 'Manual')
@@ -52,7 +51,7 @@ stages:
     - task: DotNetCoreCLI@2
       inputs:
         command: 'pack'
-        packagesToPack: '**/*.csproj'
+        packagesToPack: '$(buildProject)'
         configuration: '$(buildConfiguration)'
         packDirectory: '$(Build.ArtifactStagingDirectory)'
         versioningScheme: 'off'
@@ -62,4 +61,3 @@ stages:
         packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
         nuGetFeedType: 'internal'
         publishVstsFeed: '4b0a92c6-28ec-45d8-b044-b37411c9af60'
-

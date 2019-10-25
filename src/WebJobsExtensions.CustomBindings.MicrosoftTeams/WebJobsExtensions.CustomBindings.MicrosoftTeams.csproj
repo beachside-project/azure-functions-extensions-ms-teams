@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Atsushi Yokohama</Authors>
     <VersionPefix>1.0.0</VersionPefix>
-    <VersionSuffix>preview3</VersionSuffix>
+    <VersionSuffix>preview4</VersionSuffix>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Company />
     <PackageTags>Azure;AzureFunctions;MsTeams</PackageTags>
