@@ -53,14 +53,14 @@ stages:
       inputs:
         command: 'build'
         projects: '$(buildProject)'
-        arguments: '$(buildConfiguration)'
+        arguments: '--configuration $(buildConfiguration)'
     - task: DotNetCoreCLI@2
       displayName: 'DotNetCoreCLI@2: pack'
       inputs:
         command: 'pack'
         packagesToPack: '$(buildProject)'
         configuration: '$(buildConfiguration)'
-        packDirectory: '$(Build.ArtifactStagingDirectory)'
+        nobuild: true
         versioningScheme: 'off'
     - task: DotNetCoreCLI@2
       displayName: 'DotNetCoreCLI@2: push'
