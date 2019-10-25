@@ -53,7 +53,6 @@ stages:
         command: 'build'
         projects: '$(buildProject)'
         arguments: '$(buildConfiguration)'
-        
     - task: DotNetCoreCLI@2
       inputs:
         command: 'pack'
