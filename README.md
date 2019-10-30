@@ -1,5 +1,9 @@
 # azure-functions-extensions-ms-teams
-Azure Functions Custom Bindings for MS Teams
+[![Build Status](https://dev.azure.com/beachside/nuget-feed/_apis/build/status/beachside-project.azure-functions-extensions-ms-teams?branchName=master)](https://dev.azure.com/beachside/nuget-feed/_build/latest?definitionId=16&branchName=master)
+[![WebJobsExtensions.CustomBindings.MicrosoftTeams package in beachside-nuget feed in Azure Artifacts](https://feeds.dev.azure.com/beachside/_apis/public/Packaging/Feeds/4b0a92c6-28ec-45d8-b044-b37411c9af60/Packages/46ad9dc0-3479-4997-9361-7ef2007cf850/Badge)](https://dev.azure.com/beachside/nuget-feed/_packaging?_a=package&feed=4b0a92c6-28ec-45d8-b044-b37411c9af60&package=46ad9dc0-3479-4997-9361-7ef2007cf850&preferRelease=true)  
+(Feed on Azure Artifacts private)
+
+Azure Functions Custom Bindings for MS Teams.
 
 ## Prerequisites: Teams settings
 
